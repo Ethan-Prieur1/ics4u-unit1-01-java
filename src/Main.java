@@ -32,10 +32,9 @@ public abstract class Main {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter log length (0.25, 0.5 or 1.0): ");
         float lengthNumber = sc.nextFloat();
-        float weight = lengthNumber * LOGWEIGHT;
+        float weight = MAXTRUCKAMOUNT / (lengthNumber * LOGWEIGHT);
 
-        weight = MAXTRUCKAMOUNT / weight;
-        System.out.println(+ weight);
+        System.out.println(+weight);
         System.out.println("logs can fit in the truck");
         System.out.println("\nDone.");
     }
